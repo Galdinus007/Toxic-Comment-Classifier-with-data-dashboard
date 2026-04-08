@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(135deg, #670d10 0%, #092756 100%), radial-gradient(ellipse at 0% 100%, rgba(104, 128, 138, 0.4) 10%, rgba(138, 114, 76, 0) 40%);
+    background-blend-mode: overlay;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1.2px;
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align */
+}
+
+.login {
+    background: linear-gradient(to right, #080808, #090C1E, #080808);
+    border-radius: 10px;
+    border: 3px solid #191970;
+    box-shadow: 0 4px 20px rgb(3, 9, 125);
+    margin: 20px; /* Margin for spacing */
+    padding: 40px;
+    max-width: 600px; /* Set a max-width */
+    width: 100%; /* Use full width */
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px; /* Changed to margin-bottom */
+    font-size: 50px;
+    animation: bounceIn 1s ease-in;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+input[type="text"] {
+    width: calc(100% - 40px); /* Full width input */
+    padding: 15px;
+    font-size: 20px;
+    border: 3px solid rgb(16, 22, 72);
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    margin-bottom: 20px; /* Space below input */
+    transition: border-color 0.5s;
+    outline: none;
+    box-shadow: 0 4px 20px rgb(16, 22, 72);
+}
+
+input[type="text"]:focus {
+    border-color: white;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    padding: 15px 25px;
+    font-size: 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%; /* Full width button */
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.results h3 {
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(180deg, silver, #eee);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 24px;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

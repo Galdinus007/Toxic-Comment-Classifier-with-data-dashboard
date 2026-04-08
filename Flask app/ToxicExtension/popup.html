@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toxic Comment Scanner</title>
+    <style>
+      body { font-family: sans-serif; width: 250px; padding: 10px; }
+      button { padding: 6px 12px; }
+    </style>
+  </head>
+  <body>
+    <h3>Toxic Comment Scanner</h3>
+    <button id="scan">Scan Comments</button>
+    <p id="status"></p>
+
+    <script>
+      document.getElementById("scan").addEventListener("click", async () => {
+        document.getElementById("status").innerText = "Scanning...";
+        await chrome.scripting.executeScript({
+          target: { tabId: (await chrome.tabs.query({ active: true, currentWindow: true }))[0].id },
+          files: ["content.js"]
+        });
+        document.getElementById("status").innerText = "Scan complete!";
+      });
+    </script>
+  </body>
+</html>

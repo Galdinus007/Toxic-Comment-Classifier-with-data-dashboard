@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Toxic Comment Highlighter",
+  "version": "1.0",
+  "description": "Scans and highlights toxic comments on YouTube using your Flask model.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://127.0.0.1:5000/*", "https://127.0.0.1:5000/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "128": "icon.png"
+  }
+}
